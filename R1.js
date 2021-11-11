@@ -1,13 +1,13 @@
-// let mysql = require("mysql2")
+let mysql = require("mysql2")
 
-// let connection = mysql.createConnection(
-//     {
-//         host        : "localhost",
-//         user        : "root",
-//         password    : "Contraseña",
-//         database    : "CODENOTCH"
-//     }
-// )
+let connection = mysql.createConnection(
+    {
+        host        : "localhost",
+        user        : "root",
+        password    : "Contraseña",
+        database    : "CODENOTCH"
+    }
+)
 
 // connection.connect(function(error){
 //     if(error)
@@ -94,7 +94,7 @@
 // })
 
 
-// let sql = UPDATE Notas SET Nota = 0;
+// let sql = "UPDATE Notas SET Nota = 0";
 // connection.query(sql, function(err, result)
 // {
 //     if(err)
@@ -120,7 +120,7 @@
 //     }
 // });
 
-// let sql = "SELECT idProfesores2, Nombre, Apellidos FROM Profesores2"
+// let sql = "SELECT * FROM Profesores2"
 // connection.query(sql, function(err, result)
 // {
 //     if(err)
@@ -146,15 +146,15 @@
 //     }
 // });
 
-let sql = "UPDATE Notas SET Nota = 5 WHERE Nota < 5";
-connection.query(sql, function(err, result)
-{
-    if(err)
-    console.log(err);
-    else
-    {
-        console.log("Notas actualizadas");
-        console.log(result);
+// let sql = "UPDATE Notas SET Nota = 5 WHERE Nota < 5";
+// connection.query(sql, function(err, result)
+// {
+//     if(err)
+//     console.log(err);
+//     else
+//     {
+//         console.log("Notas actualizadas");
+//         console.log(result);
         
-    }
-});
+//     }
+// });
