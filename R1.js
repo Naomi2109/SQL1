@@ -94,7 +94,7 @@
 // })
 
 
-// let sql = UPDATE Notas SET Notas = 0;
+// let sql = UPDATE Notas SET Nota = 0;
 // connection.query(sql, function(err, result)
 // {
 //     if(err)
@@ -146,7 +146,7 @@
 //     }
 // });
 
-let sql = "UPDATE Notas SET Notas = 5 WHERE Notas < 5";
+let sql = "UPDATE Notas SET Nota = 5 WHERE Nota < 5";
 connection.query(sql, function(err, result)
 {
     if(err)
