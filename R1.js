@@ -1,19 +1,19 @@
-let mysql = require("mysql2")
+// let mysql = require("mysql2")
 
-let connection = mysql.createConnection(
-    {
-        host        : "localhost",
-        user        : "root",
-        password    : "Patatas21",
-        database    : "CODENOTCH"
-    }
-)
+// let connection = mysql.createConnection(
+//     {
+//         host        : "localhost",
+//         user        : "root",
+//         password    : "Contraseña",
+//         database    : "CODENOTCH"
+//     }
+// )
 
-connection.connect(function(error){
-    if(error)
-    console.log(error);
-    else console.log("Conexión correcta");
-});
+// connection.connect(function(error){
+//     if(error)
+//     console.log(error);
+//     else console.log("Conexión correcta");
+// });
 
 
 // let sql = "DELETE FROM Notas"
@@ -132,3 +132,29 @@ connection.connect(function(error){
         
 //     }
 // });
+
+// let sql = "DELETE FROM Notas WHERE Fecha < 20110101 ";
+// connection.query(sql, function(err, result)
+// {
+//     if(err)
+//     console.log(err);
+//     else
+//     {
+//         console.log("Notas borradas");
+//         console.log(result);
+        
+//     }
+// });
+
+let sql = "UPDATE Notas SET Notas = 5 WHERE Notas < 5";
+connection.query(sql, function(err, result)
+{
+    if(err)
+    console.log(err);
+    else
+    {
+        console.log("Notas actualizadas");
+        console.log(result);
+        
+    }
+});
